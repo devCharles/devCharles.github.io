@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo test",
     "start": "webpack-dev-server --devtool 'source-map' --config webpack.config.js",
-    "up": "rm -rf dist && webpack --config webpack.config.js && cp index.html dist && cp README.md dist && rm -rf ../charlesTemp && mkdir ../charlesTemp && cp dist/* ../charlesTemp && git checkout master && rm index.html bundle.js README.md && mv ../charlesTemp/* . && rm -rf ../charlesTemp && echo 'DONE!'"
+    "up": "rm -rf dist && webpack --config webpack.config.js && cp index.html dist && cp README.md dist && rm -rf ../charlesTemp && mkdir ../charlesTemp && cp dist/* ../charlesTemp && git checkout master && rm -f index.html bundle.js README.md && mv ../charlesTemp/* . && rm -rf ../charlesTemp && echo 'DONE!'"
   },
   "repository": {
     "type": "git",
