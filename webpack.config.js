@@ -3,10 +3,12 @@ const path = require('path')
 const name = require('./package.json').name + '.js'
 
 module.exports = {
-  entry: './src/js/index.js',
+  entry: [
+    'babel-polyfill', './src/js/index.js'
+  ],
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: name
+    filename: 'bundle.js'
   },
   devServer: {
     host: "0.0.0.0",
