@@ -1,7 +1,5 @@
 body{
   overflow: hidden;
-  height: 300vh;
-  width: 100vw;
 }
 body::-webkit-scrollbar {
     display: none;
@@ -10,14 +8,29 @@ body::-webkit-scrollbar {
   background-color: black;
   width: 100vw;
   height: 100vh;
+  z-index: -1;
 }
-#sec2{
-  width: 100vw;
-  height: 100vh;
+#cover-name{
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  color: white;
+  .title{
+    color: white;
+  }
+  .subtitle{
+    color: white;
+  }
+  #profile-pic{
+    border-radius: 50%;
+  }
+  .social{
+    text-align: right;
+    font-size: 2.5em;
+    margin-right: .5em;
+    cursor: pointer;
+  }
+}
+.ugly{
   background-color: red;
-}
-#sec3{
-  width: 100vw;
-  height: 100vh;
-  background-color: green;
 }
