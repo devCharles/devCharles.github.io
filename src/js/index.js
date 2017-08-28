@@ -10,8 +10,9 @@ let GHProfileInfo;
 getGHProfileInfo().then((GHResponse)=>{
   console.log("GH Profile information obtained");
   document.getElementById("profile-pic").src = GHResponse.avatar_url
+  console.log("<< IN CODE WE TRUST >>")
 }).catch(()=>{
-  console.error("can not get GH profile information from '"+ config.apiGHInfoProfileUrl +"'");
+  console.error("Can't get  GH profile information from '"+ config.apiGHInfoProfileUrl +"'");
 })
 
 /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
