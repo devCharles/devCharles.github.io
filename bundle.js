@@ -3756,8 +3756,9 @@ let GHProfileInfo;
 getGHProfileInfo().then(GHResponse => {
   console.log("GH Profile information obtained");
   document.getElementById("profile-pic").src = GHResponse.avatar_url;
+  console.log("<< IN CODE WE TRUST >>");
 }).catch(() => {
-  console.error("can not get GH profile information from '" + __WEBPACK_IMPORTED_MODULE_2__config___default.a.apiGHInfoProfileUrl + "'");
+  console.error("Can't get  GH profile information from '" + __WEBPACK_IMPORTED_MODULE_2__config___default.a.apiGHInfoProfileUrl + "'");
 });
 
 /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
@@ -8387,7 +8388,7 @@ exports = module.exports = __webpack_require__(331)(true);
 
 
 // module
-exports.push([module.i, "body {\n  overflow: hidden; }\n\nbody::-webkit-scrollbar {\n  display: none; }\n\n#particles-js {\n  background-color: black;\n  width: 100vw;\n  height: 100vh;\n  z-index: -1; }\n\n#cover-name {\n  z-index: 10;\n  position: absolute;\n  top: 0;\n  color: white; }\n  #cover-name .title {\n    color: white; }\n  #cover-name .subtitle {\n    color: white; }\n  #cover-name #profile-pic {\n    border-radius: 50%; }\n  #cover-name .social {\n    text-align: right;\n    font-size: 2.5em;\n    margin-right: .5em;\n    cursor: pointer; }\n\n.ugly {\n  background-color: red; }\n", "", {"version":3,"sources":["/home/charles/code/charles/devCharles.github.io/src/scss/src/scss/index.scss"],"names":[],"mappings":"AAAA;EACE,iBAAgB,EACjB;;AACD;EACI,cAAa,EAChB;;AACD;EACE,wBAAuB;EACvB,aAAY;EACZ,cAAa;EACb,YAAW,EACZ;;AACD;EACE,YAAW;EACX,mBAAkB;EAClB,OAAM;EACN,aAAY,EAgBb;EApBD;IAMI,aAAY,EACb;EAPH;IASI,aAAY,EACb;EAVH;IAYI,mBAAkB,EACnB;EAbH;IAeI,kBAAiB;IACjB,iBAAgB;IAChB,mBAAkB;IAClB,gBAAe,EAChB;;AAEH;EACE,sBAAqB,EACtB","file":"index.scss","sourcesContent":["body{\n  overflow: hidden;\n}\nbody::-webkit-scrollbar {\n    display: none;\n}\n#particles-js{\n  background-color: black;\n  width: 100vw;\n  height: 100vh;\n  z-index: -1;\n}\n#cover-name{\n  z-index: 10;\n  position: absolute;\n  top: 0;\n  color: white;\n  .title{\n    color: white;\n  }\n  .subtitle{\n    color: white;\n  }\n  #profile-pic{\n    border-radius: 50%;\n  }\n  .social{\n    text-align: right;\n    font-size: 2.5em;\n    margin-right: .5em;\n    cursor: pointer;\n  }\n}\n.ugly{\n  background-color: red;\n}\n"],"sourceRoot":""}]);
+exports.push([module.i, "body {\n  overflow: hidden; }\n\nbody::-webkit-scrollbar {\n  display: none; }\n\n#particles-js {\n  background-color: black;\n  width: 100vw;\n  height: 100vh;\n  z-index: -1; }\n\n#cover-name {\n  z-index: 10;\n  position: absolute;\n  top: 0;\n  color: white; }\n  #cover-name .title {\n    color: white; }\n  #cover-name .subtitle {\n    color: white; }\n  #cover-name #profile-pic {\n    border-radius: 50%; }\n  #cover-name .social {\n    text-align: right;\n    font-size: 2.5em;\n    margin-right: .5em;\n    cursor: pointer; }\n\n.ugly {\n  background-color: red; }\n", "", {"version":3,"sources":["/home/devcharles/code/charles/devCharles.github.io/src/scss/src/scss/index.scss"],"names":[],"mappings":"AAAA;EACE,iBAAgB,EACjB;;AACD;EACI,cAAa,EAChB;;AACD;EACE,wBAAuB;EACvB,aAAY;EACZ,cAAa;EACb,YAAW,EACZ;;AACD;EACE,YAAW;EACX,mBAAkB;EAClB,OAAM;EACN,aAAY,EAgBb;EApBD;IAMI,aAAY,EACb;EAPH;IASI,aAAY,EACb;EAVH;IAYI,mBAAkB,EACnB;EAbH;IAeI,kBAAiB;IACjB,iBAAgB;IAChB,mBAAkB;IAClB,gBAAe,EAChB;;AAEH;EACE,sBAAqB,EACtB","file":"index.scss","sourcesContent":["body{\n  overflow: hidden;\n}\nbody::-webkit-scrollbar {\n    display: none;\n}\n#particles-js{\n  background-color: black;\n  width: 100vw;\n  height: 100vh;\n  z-index: -1;\n}\n#cover-name{\n  z-index: 10;\n  position: absolute;\n  top: 0;\n  color: white;\n  .title{\n    color: white;\n  }\n  .subtitle{\n    color: white;\n  }\n  #profile-pic{\n    border-radius: 50%;\n  }\n  .social{\n    text-align: right;\n    font-size: 2.5em;\n    margin-right: .5em;\n    cursor: pointer;\n  }\n}\n.ugly{\n  background-color: red;\n}\n"],"sourceRoot":""}]);
 
 // exports
 
