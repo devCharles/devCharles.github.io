@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 337);
+/******/ 	return __webpack_require__(__webpack_require__.s = 336);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -2768,7 +2768,7 @@ addToUnscopables('entries');
 
 __webpack_require__(329);
 
-__webpack_require__(333);
+__webpack_require__(332);
 
 __webpack_require__(127);
 
@@ -3738,37 +3738,46 @@ module.exports = g;
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_polyfill__ = __webpack_require__(90);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_polyfill___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_polyfill__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__scss_index_scss__ = __webpack_require__(334);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__scss_index_scss__ = __webpack_require__(333);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__scss_index_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__scss_index_scss__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__config__ = __webpack_require__(126);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__config___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__config__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__html_cover_html__ = __webpack_require__(332);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__html_cover_html___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__html_cover_html__);
 
 
 
-
-
-document.getElementById("cover").innerHTML = __WEBPACK_IMPORTED_MODULE_3__html_cover_html___default.a;
 
 const getGHProfileInfo = async () => await (await fetch(__WEBPACK_IMPORTED_MODULE_2__config___default.a.apiGHInfoProfileUrl)).json();
 let GHProfileInfo;
 getGHProfileInfo().then(GHResponse => {
-  console.log("GH Profile information obtained");
-  document.getElementById("profile-pic").src = GHResponse.avatar_url;
   console.log("<< IN CODE WE TRUST >>");
+  // console.info("GH Profile information obtained");
+  document.getElementById("profile-pic").src = GHResponse.avatar_url;
 }).catch(() => {
-  console.error("Can't get  GH profile information from '" + __WEBPACK_IMPORTED_MODULE_2__config___default.a.apiGHInfoProfileUrl + "'");
+  console.error(`Can't get GH profile information from '${__WEBPACK_IMPORTED_MODULE_2__config___default.a.apiGHInfoProfileUrl}'`);
 });
 
 /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
 particlesJS.load('particles-js', __WEBPACK_IMPORTED_MODULE_2__config___default.a.particlesConf, function () {
-  console.log('callback - particles.js config loaded');
+  // console.log('callback - particles.js config loaded');
 });
 
-//set social media logos
-document.getElementById("fb-logo").src = __WEBPACK_IMPORTED_MODULE_2__config___default.a.fbWhite;
-document.getElementById("tw-logo").src = __WEBPACK_IMPORTED_MODULE_2__config___default.a.twWhite;
+//social media
+const fbLogo = document.getElementById("fb-logo");
+const twLogo = document.getElementById("tw-logo");
+const ghLogo = document.getElementById("gh-logo");
+
+//set social media links
+fbLogo.addEventListener("click", () => {
+  window.open("http://facebook.com/YAYOSILVAIPN", "_blank");
+});
+
+twLogo.addEventListener("click", () => {
+  window.open("http://twitter.com/devcharles", "_blank");
+});
+
+twLogo.addEventListener("click", () => {
+  window.open("https://github.com/devCharles", "_blank");
+});
 
 /***/ }),
 /* 126 */
@@ -8477,12 +8486,6 @@ function toComment(sourceMap) {
 
 /***/ }),
 /* 332 */
-/***/ (function(module, exports) {
-
-module.exports = "<div id=\"particles-js\"></div>\n\n<section class=\"hero is-fullheight\" id=\"cover-name\">\n  <div class=\"hero-body\">\n    <div class=\"container is-centered\">\n      <div class=\"column is-half\">\n        <figure class=\"image is-128x128 \" >\n          <img  alt=\"pic\"  id=\"profile-pic\">\n        </figure>\n      </div>\n\n      <h1 class=\"title\" >\n        Carlos Silva (@devCharles)\n      </h1>\n      <h2 class=\"subtitle\">\n        Developing dreams and ideas\n      </h2>\n      <p>\n        <span class=\"fa fa-facebook-square social\"></span>\n        <span class=\"fa fa-twitter-square social\" ></span>\n        <span class=\"fa fa-github-square social\" ></span>\n      </p>\n    </div>\n  </div>\n\n</section>\n";
-
-/***/ }),
-/* 333 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {/**
@@ -9225,7 +9228,7 @@ module.exports = "<div id=\"particles-js\"></div>\n\n<section class=\"hero is-fu
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(124)))
 
 /***/ }),
-/* 334 */
+/* 333 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -9239,7 +9242,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(335)(content, options);
+var update = __webpack_require__(334)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -9256,7 +9259,7 @@ if(false) {
 }
 
 /***/ }),
-/* 335 */
+/* 334 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -9302,7 +9305,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(336);
+var	fixUrls = __webpack_require__(335);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -9615,7 +9618,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 336 */
+/* 335 */
 /***/ (function(module, exports) {
 
 
@@ -9710,7 +9713,7 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 337 */
+/* 336 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(90);
